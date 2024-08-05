@@ -12,7 +12,7 @@ export const ShowTask = ({ taskList, setTasklist, task, setTask }) => {
         setTasklist(updatedTaskList);
     }
 
-    
+
 
     return (
         <section className='showTask'>

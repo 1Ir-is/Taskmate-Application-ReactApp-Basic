@@ -28,6 +28,7 @@ header .logo{
 header .logo img{
   max-width: 40px;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 header .logo span{

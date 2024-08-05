@@ -1,7 +1,18 @@
 import React from 'react'
 
-export const ShowTask = ({ taskList, setTasklist }) => {
+export const ShowTask = ({ taskList, setTasklist, task, setTask }) => {
 
+    const handleUpdate = (id) => {
+        const selectedTask = taskList.find((task) => task.id === id);
+        setTask(selectedTask);
+    }
+
+    const handleDelete = (id) => {
+        const updatedTaskList = taskList.filter((task) => task.id !== id);
+        setTasklist(updatedTaskList);
+    }
+
+    
 
     return (
         <section className='showTask'>
@@ -19,8 +30,8 @@ export const ShowTask = ({ taskList, setTasklist }) => {
                             <span className='name'>{task.name}</span>
                             <span className='time'>{task.time}</span>
                         </p>
-                        <i className="bi bi-pencil-square"></i>
-                        <i className="bi bi-trash"></i>
+                        <i onClick={() => handleUpdate(task.id)} className="bi bi-pencil-square"></i>
+                        <i onClick={() => handleDelete(task.id)} className="bi bi-trash"></i>
                     </li>
                 ))}
 

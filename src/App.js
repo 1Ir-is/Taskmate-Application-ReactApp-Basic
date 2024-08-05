@@ -10,13 +10,25 @@ import "./App.css";
 function App() {
 
   const [taskList, setTasklist] = useState([]);
+  const [task, setTask] = useState({});
+
 
   return (
     <div className="App">
       <div className="container">
         <Header />
-        <AddTask taskList={taskList} setTasklist={setTasklist}/>
-        <ShowTask taskList={taskList} setTasklist={setTasklist}/>
+        <AddTask
+          taskList={taskList}
+          setTasklist={setTasklist}
+          task={task}
+          setTask={setTask}
+        />
+        <ShowTask
+          taskList={taskList}
+          setTasklist={setTasklist}
+          task={task}
+          setTask={setTask}
+        />
       </div>
     </div>
   );

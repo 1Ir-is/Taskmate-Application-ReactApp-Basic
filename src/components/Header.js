@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/irisnet-iris-logo.png";
 
 export const Header = () => {
 
